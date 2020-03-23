@@ -47,7 +47,8 @@ storage:
     persistence:
       ## Note if you use disk.persistence.enabled, replicaCount should be set to 1 unless your access mode is ReadWriteMany
       enabled: false
-      accessMode: ReadWriteOnce
+      accessModes:
+        - ReadWriteOnce
       size: 4Gi
   mongo:
     # you must set this on the command line when you run 'helm install'
